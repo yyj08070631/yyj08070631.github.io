@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://geekhouse.top/sitemap.xml

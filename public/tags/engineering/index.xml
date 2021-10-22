@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Engineering on GeekHouse</title>
+    <link>https://geekhouse.top/tags/engineering/</link>
+    <description>Recent content in Engineering on GeekHouse</description>
+    <image>
+      <url>https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 11 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://geekhouse.top/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>html-webpack-plugin 4.x 对多模板下热重载缓慢问题的修复</title>
+      <link>https://geekhouse.top/posts/engineering_html-webpack-plugin_4.x_change/</link>
+      <pubDate>Fri, 11 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhouse.top/posts/engineering_html-webpack-plugin_4.x_change/</guid>
+      <description>前言 手上的公司项目热重载一直很慢，每次热重载大概要 15s 左右，最近实在忍无可忍，决定排查一下。
+猜想 项目是基于 vue-cli2 搭建的，前人将 webpack 升级到了 webpack4。出于历史原因，公司项目的模块是根据模板（.html）划分的，因此项目中存在超过 30 个模板。这让我想起了之前在优化一个 webpack3 项目的时候，也遇到过类似的多模板热重载缓慢的情况，当时是使用 html-webpack-plugin-for-multihtml 库 解决了问题，因此我想，这次会不会也是 html-webpack-plugin 的锅呢？
+升级 html-webpack-plugin 问题解决 我尝试把 html-webpack-plugin 升级到了最新的 @4.0.0-beta.8 版本，发现热重载速度降到了 1s 左右！
+问题解决了，可是其中的原理是什么呢？
+使用 cpuprofile-webpack-plugin 进行性能分析 cpuprofile-webpack-plugin 是一个图形化的 webpack 构建性能分析工具，它会统计构建过程中每个插件运行的时间，还会生成整个构建过程的火焰图，如下图，它记录了我的项目使用 html-webpack-plugin@3.2.0 时一次热重载的性能分析：
+ 图：cpuprofile-webpack-plugin 分析结果
+ 我们发现在整个 15.94s 的热重载过程中，html-webpack-plugin 的运行时间占据了 13.51s，可以说几乎全部时间都用在了这上面，这个图也验证了我的猜想。接下来，我们通过火焰图进一步分析，首先找一个运行时间较长，比较有代表性的 html-webpack-plugin 执行过程：
+ 图：一次时间较长的 html-webpack-plugin 运行
+ 点击进去，查看更详细的调用栈分析：
+ 图：html-webpack-plugin 详细的调用栈分析
+ 发现全部耗时集中在 html-webpack-plugin/index.js -&amp;gt; templateParametersGenerator -&amp;gt; toJson 函数上。
+查看源码 首先查看了最新版（4.0.0-beta.8）中 templateParametersGenerator 方法的源码，可以看出它是用来生成 templateParameters 的默认配置的，而在这个版本中它并没有调用 toJson 方法：</description>
+    </item>
+    
+    <item>
+      <title>Vue1.0&#43;Webpack1&#43;Gulp项目升级构建方案的踩坑路</title>
+      <link>https://geekhouse.top/posts/engineering_vue1_update/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhouse.top/posts/engineering_vue1_update/</guid>
+      <description>最近半年在维护公司的一个管理后台项目，搭建之初的技术栈比较混乱，构建方案采用了Gulp中调用Webpack的方式，Gulp负责处理.html文件，Webpack负责加载.vue、.js等。而在这一套构建方案中，主要有这些问题：
+ 没有实现JS压缩、CSS兼容等功能。 在开发模式下，保存代码，项目会进行完全的重新打包，持续构建速度不仅缓慢，还会产生缓存的现象（构建完成后刷新页面改动不生效）。 由于目前的方案没有使用http-proxy-middleware这样的请求代理模块，导致项目在本地开发时还要部署后端服务，对新接手的开发者不友好，而且经常由于沟通不及时产生测试环境与本地环境的代码同步问题。  因此，在熟悉这个项目之后，打算对其构建方案进行升级，主要为了解决上述的问题。
+1. 原有构建方案描述 原有构建速度  npm run build：打包约50s npm run dev：开启开发模式约50s，保存自动重新编译需约6s，编译完成后需要刷新才能看到效果，偶尔因缓存问题需要再次自动重新编译才能看到效果  原有构建结果  ./build/development：存放渲染后的js文件 ./build/html：存放渲染后的html文件 ./build/rev：保存各个入口文件hash值的json文件  打包代码解析 /** * 使用gulp-clean插件删除build目录下的文件 */ gulp.task(&amp;#39;clean&amp;#39;, function () { if (!stopClean) { return gulp.src(&amp;#39;build/&amp;#39; + directory, { read: false }).pipe(clean()) } }) /** * 使用webpack打包vue与js文件，在clean之后进行 */ gulp.task(&amp;#39;webpack&amp;#39;, [&amp;#39;clean&amp;#39;], function (callback) { deCompiler.run(function (err, stats) { if (err) throw new gutil.PluginError(&amp;#39;webpack&amp;#39;, err) gutil.log(&amp;#39;[webpack]&amp;#39;, stats.toString({})) callback() }) }) /** * 使用gulp-uglify插件对js文件进行丑化，在webpack之后进行 */ gulp.</description>
+    </item>
+    
+  </channel>
+</rss>
