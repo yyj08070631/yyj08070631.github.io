@@ -18,4 +18,4 @@ git add --all
 git commit -m "Publishing to master (deploy.sh)"
 
 # 推送到远程仓库
-git push origin master
+git push --force origin master
