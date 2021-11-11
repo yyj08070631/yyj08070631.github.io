@@ -23,7 +23,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   # title: ExampleSite
-  description: "Geek / Sports Fan / Gamer"
+  description: "FED / Sports Fan / Otaku? / Studying WebGL"
   # keywords: [Blog, Portfolio, PaperMod]
   author: YYJ
   # author: ["Me", "You"] # multiple authors
@@ -79,7 +79,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "\U0001F44F \U0001F44F \U0001F44F"
-    Content: "Geek / Sports Fan / Gamer"
+    Content: "FED / Sports Fan / Otaku? / Studying WebGL"
 
   socialIcons:
     - name: github
