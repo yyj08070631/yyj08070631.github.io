@@ -2,4 +2,4 @@
 title: About
 ---
 
-Geek House, yyds.
+I'm a KOP.

@@ -3,11 +3,11 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Posts | GeekHouse | 不肥的肥羊</title>
+<title>Engineering | GeekHouse | 不肥的肥羊</title>
 <meta name=keywords content>
-<meta name=description content="Posts - GeekHouse | 不肥的肥羊">
+<meta name=description content="Geek / Sports Fan / Gamer">
 <meta name=author content="YYJ">
-<link rel=canonical href=https://geekhouse.top/posts/>
+<link rel=canonical href=https://geekhouse.top/tags/engineering/>
 <meta name=google-site-verification content="XYZabc">
 <meta name=yandex-verification content="XYZabc">
 <meta name=msvalidate.01 content="XYZabc">
@@ -20,20 +20,19 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.89.1">
-<link rel=alternate type=application/rss+xml href=https://geekhouse.top/posts/index.xml>
+<link rel=alternate type=application/rss+xml href=https://geekhouse.top/tags/engineering/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Posts">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-184187677-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Engineering">
 <meta property="og:description" content="Geek / Sports Fan / Gamer">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://geekhouse.top/posts/"><meta property="og:image" content="https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta property="og:url" content="https://geekhouse.top/tags/engineering/"><meta property="og:image" content="https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
-<meta name=twitter:title content="Posts">
+<meta name=twitter:title content="Engineering">
 <meta name=twitter:description content="Geek / Sports Fan / Gamer">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://geekhouse.top/posts/"}]}</script>
 </head>
 <body class=list id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -72,24 +71,9 @@
 </header>
 <main class=main>
 <header class=page-header>
-<h1>Posts</h1>
+<h1>Engineering</h1>
 </header>
-<article class=post-entry>
-<header class=entry-header>
-<h2>位运算的算法应用
-</h2>
-</header>
-<section class=entry-content>
-<p>基本介绍 作为算法题的一个大类，位运算相关的题目常常出现在各大公司的面试/笔试题中，下面先说说位运算的基本原理。
-位运算使得计算机可以直接对每个比特位进行计算，效率会非常的高。
-在 JS 中，位运算会将操作数当作 32 位的二进制串进行计算，如果二进制串超过 32 位，则只保留最后的 32 位进行计算，如：
-11100110111110100000000000000110000000000001 # 输入的二进制串 10100000000000000110000000000001 # 实际使用的二进制串 在 JS 中，位运算有 7 种运算符：
-按位与（a & b）：在 a, b 的位表示中，每一个对应的位都为 1 则返回 1，否则返回 0 # 15 & 9 -> 9 0000 0000 0000 0000 0000 0000 0000 1111 & 0000 0000 0000 0000 0000 0000 0000 1001 --------------------------------------- 0000 0000 0000 0000 0000 0000 0000 1001 按位或（a | b）：在 a, b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1，否则返回 0 # 15 | 9 -> 15 0000 0000 0000 0000 0000 0000 0000 1111 | 0000 0000 0000 0000 0000 0000 0000 1001 --------------------------------------- 0000 0000 0000 0000 0000 0000 0000 1111 按位异或（a ^ b）：在 a, b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0 # 15 ^ 9 -> 6 0000 0000 0000 0000 0000 0000 0000 1111 | 0000 0000 0000 0000 0000 0000 0000 1001 --------------------------------------- 0000 0000 0000 0000 0000 0000 0000 0110 按位非（~a）：反转被操作数的位，即将每一位的 0 转为 1，1 转为 0 # ~15 -> -16 ~ 0000 0000 0000 0000 0000 0000 0000 1111 --------------------------------------- 1111 1111 1111 1111 1111 1111 1111 0000 左移（a « b）：将 a 的二进制串向左移动 b 位，右边移入 0 # 9 &lt;&lt; 2 -> 36 &lt;&lt; 0000 0000 0000 0000 0000 0000 0000 1001 --------------------------------------- 0000 0000 0000 0000 0000 0000 0010 0100 有符号右移（a » b）：把 a 的二进制表示向右移动 b 位，向右被移出的位被丢弃，拷贝最左侧的位以填充左侧。这种右移由于保留最左侧的二进制位，因此可以保留数字原本的正负符号 # 9 >> 2 -> 2 >> 0000 0000 0000 0000 0000 0000 0000 1001 --------------------------------------- 0000 0000 0000 0000 0000 0000 0010 0010 # -9 >> 2 -> -3 >> 1111 1111 1111 1111 1111 1111 1111 0111 --------------------------------------- 1111 1111 1111 1111 1111 1111 1111 1101 无符号右移（a »> b）：把 a 的二进制表示向右移动 b 位，向右被移出的位被丢弃，左边空出的位全部填充为 0。这种右移由于左侧直接补 0，因此生成的数字必然是非负数 # 19 >>> 2 -> 4 >>> 0000 0000 0000 0000 0000 0000 0001 0011 --------------------------------------- 0000 0000 0000 0000 0000 0000 0010 0010 # -19 >>> 2 -> 1073741819 >>> 1111 1111 1111 1111 1111 1111 1110 1101 --------------------------------------- 0011 1111 1111 1111 1111 1111 1111 0011 常用性质 在使用位运算技巧解的算法题中，有以下这些常用的性质：...</p>
-</section>
-<footer class=entry-footer>May 14, 2021&nbsp;·&nbsp;8 min&nbsp;·&nbsp;YYJ</footer>
-<a class=entry-link aria-label="post link to 位运算的算法应用" href=https://geekhouse.top/posts/algorithm_bit/></a>
-</article>
-<article class=post-entry>
+<article class="post-entry tag-entry">
 <header class=entry-header>
 <h2>html-webpack-plugin 4.x 对多模板下热重载缓慢问题的修复
 </h2>
@@ -111,22 +95,7 @@
 <footer class=entry-footer>October 11, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;YYJ</footer>
 <a class=entry-link aria-label="post link to html-webpack-plugin 4.x 对多模板下热重载缓慢问题的修复" href=https://geekhouse.top/posts/engineering_html-webpack-plugin_4.x_change/></a>
 </article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>排序算法
-</h2>
-</header>
-<section class=entry-content>
-<p>前言 作为一个非计算机专业出身的渣渣小前端，算法是前端技能进阶路上一座绕不开的大山。曾经尝试到 leetcode 上开坑，然而发现做出一道题，要花上好几个小时的时间。后来搜了一些算法学习方法相关的文章，许多人都提到：算法需要先系统性的学习，再去做题。而我平时开发最常使用 JavaScript，因此选用《数据结构与算法 JavaScript 描述》一书作为入门书籍。
-阅读这本书之后，我与 《JS家的排序算法》 作者有一个相同的感受：书里有很多小错误，不仅仅是在文字描述上，在代码中也有出现。但是不得不承认，这本书非常适合前端开发者的算法入门学习，原因是其内容足够简洁、基础，它简洁明了地解释了每种算法的原理，没有涉及优化，以及算法考察中的一些难点。所以，如果需要进阶学习，还是需要配合其他书籍食用。
-这篇文章权当我学习算法过程中的笔记，就从算法中基础的类别：排序算法开始，有问题请大家指出，我会尽快修正，避免误导他人。
-首先搭建一个简单的性能测试平台：
-// 使用一个函数集合保存所有用于测试的排序算法 let funcs = { // 工具：交换数组元素 toolExch (a, lo, hi) { let temp = a[lo]; a[lo] = a[hi]; a[hi] = temp } } // 生成一个长度为 10000，数值为 0-99 之间的数组用于测试 // 注意：排序算法的性能往往与被排序数组的特性有关系 // 如重复数据的数量、数据大小的分布、数据整体的方差等 // 本文主要的方向还是说明各种排序算法的原理 // 因此直接生成一组随机数作为测试数据 let arr = Array.from({ length: 10000 }, v => Math.floor(Math.random() * 100)) // 执行集合中所有函数 for (let key in funcs) { // 遇到有 tool 标记的函数判断为工具函数，跳过 if (!...</p>
-</section>
-<footer class=entry-footer>September 29, 2019&nbsp;·&nbsp;8 min&nbsp;·&nbsp;YYJ</footer>
-<a class=entry-link aria-label="post link to 排序算法" href=https://geekhouse.top/posts/algorithm_sort/></a>
-</article>
-<article class=post-entry>
+<article class="post-entry tag-entry">
 <header class=entry-header>
 <h2>Vue1.0+Webpack1+Gulp项目升级构建方案的踩坑路
 </h2>
