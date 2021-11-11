@@ -1,5 +1,5 @@
 baseURL: "https://geekhouse.top/"
-title: "GeekHouse"
+title: "GeekHouse | 不肥的肥羊"
 paginate: 5
 theme: PaperMod
 
@@ -22,9 +22,9 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  # title: ExampleSite
+  description: "Geek / Sports Fan / Gamer"
+  # keywords: [Blog, Portfolio, PaperMod]
   author: YYJ
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -54,10 +54,10 @@ params:
     apple_touch_icon: "<link / abs url>"
     safari_pinned_tab: "<link / abs url>"
 
-  # label:
-  #   text: "Home"
-  #   icon: /apple-touch-icon.png
-  #   iconHeight: 35
+  label:
+    text: "\U0001F44F GeekHouse"
+    # icon: /logo.png
+    iconHeight: 30
 
   # profile-mode
   # profileMode:
@@ -105,7 +105,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/yyj08070631.github.io/content"
+    URL: "https://github.com/yyj08070631/yyj08070631.github.io/edit/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
