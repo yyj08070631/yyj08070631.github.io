@@ -90,6 +90,8 @@ params:
       url: https://juejin.cn/user/1116759543253064
     - name: email
       url: mailto:yyj08070631@gmail.com
+    - name: rss
+      url: /sitemap.xml
 
   analytics:
     google:
