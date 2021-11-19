@@ -44,6 +44,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  enableemoji: true
 
   assets:
     disableHLJS: true # to disable highlight.js
@@ -79,7 +80,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "\U0001F44F \U0001F44F \U0001F44F"
-    Content: "FED / Sports Fan / Otaku? / Studying WebGL"
+    Content: "FED / Sports Fan / <a href='/otaku'>Otaku?</a> / Studying WebGL"
 
   socialIcons:
     - name: github
@@ -91,7 +92,7 @@ params:
     - name: email
       url: mailto:yyj08070631@gmail.com
     - name: rss
-      url: /sitemap.xml
+      url: /index.xml
 
   analytics:
     google:
