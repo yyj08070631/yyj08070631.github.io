@@ -21,7 +21,7 @@
 <link rel=mask-icon href=https://geekhouse.top/%3Clink%20/%20abs%20url%3E>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.89.1">
+<meta name=generator content="Hugo 0.88.1">
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
@@ -213,11 +213,11 @@ Vue1.0+Webpack1+Gulp项目升级构建方案的踩坑路
 </span><span style=color:#75715e>         * DefinePlugin 允许创建一个在编译时可以配置的全局常量。这可能会对开发模式和生产模式的构建允许不同的行为非常有用。
 </span><span style=color:#75715e>         */</span>
         <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>webpack</span>.<span style=color:#a6e22e>DefinePlugin</span>({
-            <span style=color:#a6e22e>__VERSION__</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>new</span> Date().<span style=color:#a6e22e>getTime</span>()
+            <span style=color:#ae81ff>__</span><span style=color:#a6e22e>VERSION__</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>new</span> Date().<span style=color:#a6e22e>getTime</span>()
         })
     ],
     <span style=color:#a6e22e>resolve</span><span style=color:#f92672>:</span> {
-        <span style=color:#a6e22e>root</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>__dirname</span>,
+        <span style=color:#a6e22e>root</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>__</span><span style=color:#a6e22e>dirname</span>,
         <span style=color:#a6e22e>extensions</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#e6db74>&#39;.js&#39;</span>, <span style=color:#e6db74>&#39;.vue&#39;</span>, <span style=color:#e6db74>&#39;.json&#39;</span>], <span style=color:#75715e>// 解析组件的文件后缀白名单
 </span><span style=color:#75715e></span>        <span style=color:#a6e22e>alias</span><span style=color:#f92672>:</span> { ... } <span style=color:#75715e>// 配置路径别名
 </span><span style=color:#75715e></span>    },
@@ -226,7 +226,7 @@ Vue1.0+Webpack1+Gulp项目升级构建方案的踩坑路
 </span><span style=color:#75715e></span>        <span style=color:#a6e22e>loaders</span><span style=color:#f92672>:</span> [
             { <span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/\.vue$/</span>, <span style=color:#a6e22e>loader</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;vue-loader&#39;</span> },
             { <span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/\.css$/</span>, <span style=color:#a6e22e>loader</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;style-loader!css-loader&#39;</span> },
-            { <span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/\.jsx$/</span>, <span style=color:#a6e22e>loader</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;babel-loader&#39;</span>, <span style=color:#a6e22e>include</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>join</span>(<span style=color:#a6e22e>__dirname</span>, <span style=color:#e6db74>&#39;app&#39;</span>)], <span style=color:#a6e22e>exclude</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/core/</span> },
+            { <span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/\.jsx$/</span>, <span style=color:#a6e22e>loader</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;babel-loader&#39;</span>, <span style=color:#a6e22e>include</span><span style=color:#f92672>:</span> [<span style=color:#a6e22e>path</span>.<span style=color:#a6e22e>join</span>(<span style=color:#ae81ff>__</span><span style=color:#a6e22e>dirname</span>, <span style=color:#e6db74>&#39;app&#39;</span>)], <span style=color:#a6e22e>exclude</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/core/</span> },
             { <span style=color:#a6e22e>test</span><span style=color:#f92672>:</span> <span style=color:#e6db74>/\.json$/</span>, <span style=color:#a6e22e>loader</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;json&#39;</span> }
         ]
     },
@@ -371,7 +371,7 @@ Vue1.0+Webpack1+Gulp项目升级构建方案的踩坑路
         <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>webpack</span>.<span style=color:#a6e22e>DllPlugin</span>({
             <span style=color:#a6e22e>path</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>resolve</span>(<span style=color:#e6db74>&#39;build/development/[name]-manifest.json&#39;</span>), <span style=color:#75715e>// 生成manifest文件输出的位置和文件名称
 </span><span style=color:#75715e></span>            <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;[name]-library&#39;</span>, <span style=color:#75715e>// 与output.library是一样的，对应manifest.json文件中name字段的值，防止全局变量冲突
-</span><span style=color:#75715e></span>            <span style=color:#a6e22e>context</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>__dirname</span>
+</span><span style=color:#75715e></span>            <span style=color:#a6e22e>context</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>__</span><span style=color:#a6e22e>dirname</span>
         })
     ]
 }
@@ -380,7 +380,7 @@ Vue1.0+Webpack1+Gulp项目升级构建方案的踩坑路
 <span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> {
     <span style=color:#a6e22e>plugins</span><span style=color:#f92672>:</span> [
         <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>webpack</span>.<span style=color:#a6e22e>DllReferencePlugin</span>({
-            <span style=color:#a6e22e>context</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>__dirname</span>,
+            <span style=color:#a6e22e>context</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>__</span><span style=color:#a6e22e>dirname</span>,
             <span style=color:#a6e22e>manifest</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;../build/development/vendor-manifest.json&#39;</span>) <span style=color:#75715e>// 让webpack从映射表获取使用的依赖
 </span><span style=color:#75715e></span>        })
     ]
