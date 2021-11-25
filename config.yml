@@ -125,8 +125,8 @@ params:
     
   # gittalk
   gittalk:
-    clientID: "75d9d747f200c623a0e6" # Your client ID
-    clientSecret: "e3cc2ff8d8f6ae3c894a827f226188de0d26f37e" # Your client secret
+    clientID: "9e2cdfca1be7d4afa5fd" # Your client ID
+    clientSecret: "92f0c9b3c70a6fa21595951a9f18a6e74d4f5102" # Your client secret
     repo: "gt1" # The repo to store comments
     owner: "yyj08070631" # Your GitHub ID
     admin: "yyj08070631" # Required. Github repository owner and collaborators. (Users who having write access to this repository)

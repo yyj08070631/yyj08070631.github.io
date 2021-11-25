@@ -49,6 +49,7 @@
     {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
+  {{ partial "gittalk.html" . }}
 
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
