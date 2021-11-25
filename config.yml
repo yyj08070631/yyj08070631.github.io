@@ -123,8 +123,8 @@ params:
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
     
-  # gittalk
-  gittalk:
+  # gitalk
+  gitalk:
     clientID: "9e2cdfca1be7d4afa5fd" # Your client ID
     clientSecret: "92f0c9b3c70a6fa21595951a9f18a6e74d4f5102" # Your client secret
     repo: "gt1" # The repo to store comments
