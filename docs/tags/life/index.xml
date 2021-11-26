@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Life on GeekHouse | 不肥的肥羊</title>
+    <link>https://geekhouse.top/tags/life/</link>
+    <description>Recent content in Life on GeekHouse | 不肥的肥羊</description>
+    <image>
+      <url>https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://geekhouse.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate><atom:link href="https://geekhouse.top/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记录世界的美好</title>
+      <link>https://geekhouse.top/posts/life_beauty/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhouse.top/posts/life_beauty/</guid>
+      <description> 给异地的同事分享移动硬盘数据恢复的经历，被感谢了 被咖啡店小姐姐记住了，给了我一大把黄糖包：“看到你每天都来，拿多几包回去吧，就不用每次都拿了”  </description>
+    </item>
+    
+  </channel>
+</rss>

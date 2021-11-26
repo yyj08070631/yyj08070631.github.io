@@ -67,5 +67,14 @@
 1. 原有构建方案描述 原有构建速度  npm run build：打包约50s npm run dev：开启开发模式约50s，保存自动重新编译需约6s，编译完成后需要刷新才能看到效果，偶尔因缓存问题需要再次自动重新编译才能看到效果  原有构建结果  ./build/development：存放渲染后的js文件 ./build/html：存放渲染后的html文件 ./build/rev：保存各个入口文件hash值的json文件  打包代码解析 /** * 使用gulp-clean插件删除build目录下的文件 */ gulp.task(&amp;#39;clean&amp;#39;, function () { if (!stopClean) { return gulp.src(&amp;#39;build/&amp;#39; + directory, { read: false }).pipe(clean()) } }) /** * 使用webpack打包vue与js文件，在clean之后进行 */ gulp.task(&amp;#39;webpack&amp;#39;, [&amp;#39;clean&amp;#39;], function (callback) { deCompiler.run(function (err, stats) { if (err) throw new gutil.PluginError(&amp;#39;webpack&amp;#39;, err) gutil.log(&amp;#39;[webpack]&amp;#39;, stats.toString({})) callback() }) }) /** * 使用gulp-uglify插件对js文件进行丑化，在webpack之后进行 */ gulp.</description>
     </item>
     
+    <item>
+      <title>记录世界的美好</title>
+      <link>https://geekhouse.top/posts/life_beauty/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhouse.top/posts/life_beauty/</guid>
+      <description> 给异地的同事分享移动硬盘数据恢复的经历，被感谢了 被咖啡店小姐姐记住了，给了我一大把黄糖包：“看到你每天都来，拿多几包回去吧，就不用每次都拿了”  </description>
+    </item>
+    
   </channel>
 </rss>
