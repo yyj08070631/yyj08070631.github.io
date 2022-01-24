@@ -8,6 +8,8 @@ title: 动漫 | 游戏 | 东山大法好
 
 2011 年的作品，画风在今天看完全不落伍，女角色都很好看
 
+被朋友安利了一波 P.A.Works，接下来看白箱好了
+
 ### 街角魔族 | TV 动画 | <span style="color:#F7BA2A;">7</span>/10
 
 momo yyds
