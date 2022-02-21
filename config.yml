@@ -101,6 +101,8 @@ params:
       SiteVerificationTag: "XYZabc"
     yandex:
       SiteVerificationTag: "XYZabc"
+    baidu:
+      SiteVerificationTag: "code-2FmmcfPpas"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -184,3 +186,5 @@ markup:
 #     guessSyntax: true
 #     lineNos: true
 #     style: monokai
+  staticDir:
+    - static
