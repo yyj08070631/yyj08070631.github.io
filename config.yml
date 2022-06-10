@@ -80,7 +80,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "\U0001F44F \U0001F44F \U0001F44F"
-    Content: "FED / Sports Fan / <a href='/emmm'>Emmm...</a> / Studying WebGL"
+    Content: "FED / Sports Fan / <a href='/emmm'>Emmm...</a> / Studying CG"
 
   socialIcons:
     - name: github
