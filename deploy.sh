@@ -11,6 +11,9 @@ npm run build
 # 远程目录设为 ssh 服务的 22 端口，防止本地修改了 ssh 默认端口
 git remote set-url origin ssh://git@github.com:22/yyj08070631/yyj08070631.github.io.git
 
+# 切换到 build 文件夹
+cd build
+
 # 添加更改到 git
 git add --all
 
